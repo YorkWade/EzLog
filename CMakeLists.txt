@@ -5,6 +5,15 @@ set(ALLOW_DUPLICATE_CUSTOM_TARGETS TRUE)
 
 project (EzLog)
 
+set(
+    CMAKE_RUNTIME_OUTPUT_DIRECTORY
+    ${CMAKE_HOME_DIRECTORY}/bin
+    )
+set(
+    CMAKE_LIBRARY_OUTPUT_DIRECTORY
+    ${CMAKE_HOME_DIRECTORY}/lib
+    )
+
 #include header to vs
 file(GLOB EzLog_lib_head_files "./src/*.h")
 
