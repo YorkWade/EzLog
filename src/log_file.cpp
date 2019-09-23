@@ -112,9 +112,11 @@ std::string LogFile::getLogFileName(const std::string& basename, time_t* now)
 
 	char timebuf[32];
 	struct tm tm;
-	*now = time(NULL);
+	time_t rawtime;
+	*now = time(&rawtime/*NULL*/);
 	//gmtime_r(now, &tm); // FIXME: localtime_r ?
-	tm = *gmtime(now);
+	tm = *localtime (&rawtime);// add [9/23/2019 ywd]
+	//tm = *gmtime(now);
 	strftime(timebuf, sizeof timebuf, ".%Y%m%d-%H%M%S.", &tm);
 	filename += timebuf;
 

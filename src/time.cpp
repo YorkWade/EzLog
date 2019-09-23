@@ -70,7 +70,7 @@ int gettimeofday(struct timeval * tp, struct timezone * tzp)
     SYSTEMTIME  system_time;
     ULARGE_INTEGER ularge;
 
-    GetSystemTime(&system_time);
+    GetLocalTime(&system_time);
     SystemTimeToFileTime(&system_time, &file_time);
     ularge.LowPart = file_time.dwLowDateTime;
     ularge.HighPart = file_time.dwHighDateTime;
