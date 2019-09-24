@@ -1,4 +1,4 @@
-#windows cmake  -G visual studio 10 2010 ..
+#windows cmake  -G "Visual Studio 10 2010" ..
 
 cmake_minimum_required (VERSION 2.6)
 set(ALLOW_DUPLICATE_CUSTOM_TARGETS TRUE)

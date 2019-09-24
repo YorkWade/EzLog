@@ -36,7 +36,7 @@
 
 
 #include "pthread.h"
-
+AtomicInt32 Thread::numCreated_;
 
 Thread::Thread(const Thread::ThreadFunc func, const std::string& name)
 	: started_(false),
@@ -61,13 +61,13 @@ Thread::~Thread()
 
 void Thread::setDefaultName()
 {
-	// 	int num = numCreated_.incrementAndGet();
-	// 	if (name_.empty())
-	// 	{
-	// 		char buf[32];
-	// 		_snprintf(buf, sizeof buf, "Thread%d", num);
-	// 		name_ = buf;
-	// 	}
+	int num = numCreated_.incrementAndGet();
+	if (name_.empty())
+	{
+		char buf[32];
+		_snprintf(buf, sizeof buf, "Thread%d", num);
+		name_ = buf;
+	}
 }
 
 void Thread::start()

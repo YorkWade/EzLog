@@ -10,6 +10,7 @@
 #include <tchar.h>
 #pragma warning(push)
 #pragma warning(disable : 4251)
+#include "atomic.h"
 #else
 #include <stdarg.h>
 #include <pthread.h>
@@ -35,11 +36,11 @@ class Thread:public NoCopyable
 		int join(); // return pthread_join()
 
 		bool started() const { return started_; }
-		// pthread_t pthreadId() const { return pthreadId_; }
+		 pthread_t pthreadId() const { return pthreadId_; }
 		unsigned int tid() const { return tid_; }
 		const std::string& name() const { return name_; }
 
-		//static int numCreated() { return numCreated_.get(); }
+		static int numCreated() { return numCreated_.get(); }
 		//static std::string threadName(uint32_t tid){;}
 	private:
 		// No copying allowed
@@ -63,7 +64,7 @@ class Thread:public NoCopyable
 		static void * threadProc(void * pParam);
 
 
-		//static AtomicInt32 numCreated_;
+		static AtomicInt32 numCreated_;
 		//static std::map<uint32_t,std::string> thread_names_;
 };
 
