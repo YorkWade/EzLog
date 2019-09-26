@@ -73,11 +73,7 @@ extern "C" {
 #include <time.h>
 #define _TIMESPEC_DEFINED
 #if defined(_CRT_NO_TIME_T)
-struct timespec {
-    time_t tv_sec;
-    long tv_nsec;
-};
-typedef struct timespec timespec_t;
+
 #endif  /* !_CRT_NO_TIME_T for VC2015's time.h */
 #endif  /* !_TIMESPEC_DEFINED */
 #endif  /* !HAVE_STRUCT_TIMESPEC */

@@ -1,6 +1,6 @@
 #include "current_thread.h"
 #include <stdio.h>
-
+#include "time.h"
 
 namespace Ez
 {
@@ -25,5 +25,18 @@ void CurrentThread::cacheTid()
 	}
 }
 
+
+void CurrentThread::sleepUsec(int64_t usec)
+{
+	
+#ifdef WIN32
+	nanosleep(usec);
+#else
+	struct timespec ts = { 0, 0 };
+	ts.tv_sec = static_cast<time_t>(usec / Timestamp::kMicroSecondsPerSecond);
+	ts.tv_nsec = static_cast<long>(usec % Timestamp::kMicroSecondsPerSecond * 1000);
+	::nanosleep(&ts, NULL);
+#endif
+}
 
 }
