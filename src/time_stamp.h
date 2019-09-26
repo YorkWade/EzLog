@@ -3,9 +3,14 @@
 #include <stdint.h>
 #include <string>
 
+namespace Ez
+{
+
 #ifdef _MSC_VER
 #define	snprintf	sprintf_s
 #endif
+
+
 
 class Timestamp
 {
@@ -102,6 +107,6 @@ inline Timestamp addTime(Timestamp timestamp, double seconds)
 	return Timestamp(timestamp.microSecondsSinceEpoch() + delta);
 }
 
-
+}
 
 #endif

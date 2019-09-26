@@ -1,6 +1,9 @@
 #include "async_logger.h"
 
 #include "log_file.h"
+namespace Ez
+{
+
 
 AsyncLogger::AsyncLogger(const std::string& basename,
 						 off_t rollSize,
@@ -136,4 +139,6 @@ void AsyncLogger::threadFunc()
 		output.flush();
 	}
 	output.flush();
+}
+
 }

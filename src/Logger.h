@@ -3,6 +3,13 @@
 
 #include "LogStream.h"
 #include "time_stamp.h"
+
+
+namespace Ez
+{
+
+
+
 class Logger
 {
 public:
@@ -145,6 +152,6 @@ T* CheckNotNull(Logger::SourceFile file, int line, const char *names, T* ptr)
 
 
 
-
+}
 
 #endif //EZ_LOGGER_H

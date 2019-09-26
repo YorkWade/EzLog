@@ -7,7 +7,8 @@
 //#define WIN32_LEAN_AND_MEAN
 //#include <Windows.h>
 //#endif
-
+namespace Ez
+{
 const int kSmallBuffer = 4000;
 const int kLargeBuffer = 4000*1000;
 
@@ -180,7 +181,7 @@ inline LogStream& operator<<(LogStream& s, const Hex& hex_str)
 
 
 
-
+}
 
 
 

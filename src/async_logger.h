@@ -12,6 +12,9 @@
 #include <vector>
 #include <memory>
 
+namespace Ez
+{
+
 class AsyncLogger:public NoCopyable
 {
 
@@ -60,5 +63,7 @@ private:
  	BufferPtr nextBuffer_;
  	BufferVector buffers_;
 };
+
+}
 
 #endif

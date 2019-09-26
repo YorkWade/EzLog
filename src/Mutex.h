@@ -9,6 +9,9 @@
 #include <assert.h>
 
 
+namespace Ez
+{
+
 class MutexLock : NoCopyable
 {
 public:
@@ -110,6 +113,8 @@ private:
 	MutexLock& mutex_;
 };
 
+
+}
 
 
 #endif

@@ -1,5 +1,12 @@
 #include "current_thread.h"
 #include <stdio.h>
+
+
+namespace Ez
+{
+
+
+
 //≥ı ºªØ
 namespace CurrentThread
 {
@@ -16,4 +23,7 @@ void CurrentThread::cacheTid()
 		t_cachedTid = gettid();
 		t_tidStringLength = _snprintf(t_tidString, sizeof t_tidString, "%5d ", t_cachedTid);
 	}
+}
+
+
 }

@@ -2,6 +2,9 @@
 #define EZ_CURRENT_THREAD_H
 #include "pthread.h"
 
+namespace Ez
+{
+
 namespace CurrentThread
 {
 	// internal
@@ -45,6 +48,6 @@ namespace CurrentThread
 
 
 
-
+}
 
 #endif

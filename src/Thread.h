@@ -21,6 +21,8 @@
 #include "pthread.h"
 
 
+namespace Ez
+{
 
 
 
@@ -68,4 +70,6 @@ class Thread:public NoCopyable
 		//static std::map<uint32_t,std::string> thread_names_;
 };
 
+
+}
 #endif

@@ -6,7 +6,8 @@
 #include "NoCopyable.h"
 #include "Mutex.h"
 
-
+namespace Ez
+{
 
 class CountDownLatch : NoCopyable
 {
@@ -25,6 +26,10 @@ private:
 	Condition condition_;
 	int count_;
 };
+
+
+}
+
 
 #endif  // MUDUO_BASE_COUNTDOWNLATCH_H
 

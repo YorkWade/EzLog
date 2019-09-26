@@ -2,6 +2,10 @@
 #include<stdio.h>//snprintf
 #include <assert.h>
 #include <iostream>
+
+namespace Ez
+{
+
 const char digits[] = "9876543210123456789";
 const char* zero = digits + 9;
 //BOOST_STATIC_ASSERT(sizeof(digits) == 20);
@@ -203,3 +207,4 @@ template Hex::Hex(double);
 
 
 
+}

@@ -3,6 +3,11 @@
 #include "error.h"
 #include "time.h"
 
+
+namespace Ez
+{
+
+
 // returns true if time out, false otherwise.
 bool Condition::waitForSeconds(double seconds)
 {
@@ -30,4 +35,7 @@ bool Condition::waitForSeconds(double seconds)
 	MutexLock::UnassignGuard ug(mutex_);
 	return ETIMEDOUT == pthread_cond_timedwait(&pcond_, mutex_.getPthreadMutex(), &abstime);
 #endif
+}
+
+
 }

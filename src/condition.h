@@ -5,7 +5,8 @@
 #include "NoCopyable.h"
 #include "pthread.h"
 
-
+namespace Ez
+{
 
 class Condition : NoCopyable
 {
@@ -45,5 +46,5 @@ private:
 	pthread_cond_t pcond_;
 };
 
-
+}
 #endif

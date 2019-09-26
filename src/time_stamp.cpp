@@ -24,6 +24,9 @@
 #define	snprintf	sprintf_s
 #endif
 
+namespace Ez
+{
+
 
 static_assert(sizeof(Timestamp) == sizeof(int64_t),
 	"Timestamp is same size as int64_t");
@@ -75,4 +78,6 @@ Timestamp Timestamp::now()
 	gettimeofday(&tv, NULL);
 	int64_t seconds = tv.tv_sec;
 	return Timestamp(seconds*Timestamp::kMicroSecondsPerSecond + tv.tv_usec);
+}
+
 }

@@ -8,6 +8,12 @@
 #include "append_file.h"
 #include "process_info.h"
 
+
+
+namespace Ez
+{
+
+
 LogFile::LogFile(const std::string& basename,
 	off_t rollSize,
 	bool threadSafe,
@@ -129,4 +135,7 @@ std::string LogFile::getLogFileName(const std::string& basename, time_t* now)
 	filename += ".log";
 
 	return filename;
+}
+
+
 }

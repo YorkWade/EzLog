@@ -4,6 +4,9 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <stdio.h>
+namespace Ez
+{
+
 
 AppendFile::AppendFile(StringArg filename)
 	: fp_(::fopen(filename.c_str(), "a")),  // 'e' for O_CLOEXEC
@@ -53,4 +56,7 @@ size_t AppendFile::write(const char* logline, size_t len)
 	// #undef fwrite_unlocked
 	//return ::fwrite_unlocked(logline, 1, len, fp_);
 	return fwrite(logline, 1, len, fp_);
+}
+
+
 }

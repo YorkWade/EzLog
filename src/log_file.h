@@ -7,6 +7,9 @@
 #include <string>
 #include <time.h>
 
+namespace Ez
+{
+
 class AppendFile;
 
 class LogFile:public NoCopyable
@@ -43,5 +46,9 @@ private:
 
 	const static int kRollPerSeconds_ = 60*60*24;
 };
+
+
+}
+
 
 #endif

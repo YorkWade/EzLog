@@ -5,7 +5,8 @@
 
 
 
-
+namespace Ez
+{
 
 ///////////////////////////////////////////////////////////
 char t_errnobuf[512];
@@ -217,3 +218,6 @@ void Logger::setFlush(FlushFunc flush)
 //{
 //	g_logTimeZone = tz;
 //}
+
+
+}

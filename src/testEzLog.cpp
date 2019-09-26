@@ -5,6 +5,9 @@
 #include <assert.h>
 #include "Logger.h"
 #include "async_logger.h"
+
+using namespace Ez;
+
 void fun()
 {
 	printf("fun started!");

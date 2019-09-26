@@ -1,4 +1,7 @@
 #include "count_down_latch.h"
+namespace Ez
+{
+
 
 CountDownLatch::CountDownLatch(int count)
 	: mutex_(),
@@ -30,4 +33,8 @@ int CountDownLatch::getCount() const
 {
 	MutexLockGuard lock(mutex_);
 	return count_;
+}
+
+
+
 }

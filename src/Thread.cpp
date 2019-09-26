@@ -36,6 +36,10 @@
 
 
 #include "pthread.h"
+
+namespace Ez
+{
+
 AtomicInt32 Thread::numCreated_;
 
 Thread::Thread(const Thread::ThreadFunc func, const std::string& name)
@@ -166,4 +170,6 @@ void * Thread::threadProc(void * pParam)
 	setThreadName(p->tid_, p->name().c_str());
 	p->func_();
 	return 0;
+}
+
 }

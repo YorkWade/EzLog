@@ -5,6 +5,9 @@
 #include "string_piece.h"
 
 
+namespace Ez
+{
+
 // not thread safe
 class AppendFile : NoCopyable
 {
@@ -27,5 +30,7 @@ private:
 	char buffer_[64*1024];
 	off_t writtenBytes_;
 };
+
+}
 
 #endif
